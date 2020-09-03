@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Tractor</title>
+
+
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/baffle.min.js"></script>
+    <script src="js/FileSaver.js-master/FileSaver.min.js"></script>
+    <script src="popup.js"></script>
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery-ui.structure.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+<body>
+
+    <div id="header_div">
+        <h1>Tractor</h1>
+    </div>
+
+    <div id="stars_container">
+        <div id='stars'></div>
+        <div id='stars2'></div>
+        <div id='stars3'></div>
+        <div id='stars4'></div>
+        <div id='stars5'></div>
+    </div>
+
+    <img src="../images/ufo.png" id="ufo" />
+
+
+    <br /><br />
+
+    <form name="form" id="form">
+
+        <label for="keyword">Keyword: </label>
+        <input type="text" id="keyword" name="keyword" />
+        <br />
+
+        <label for="min_size">Minimum File Size (MB): </label>
+        <input type="number" step="1" id="min_size" name="min_size" min="0" placeholder="none" />
+        <br />
+
+        <label for="max_size">Maximum File Size (MB): </label>
+        <input type="number" id="max_size" name="max_size" min="1" placeholder="none" />
+        <br />
+
+        <label for="extension_select">Desired File Extension: </label>
+
+        <input type="text" name="extension_select" id="extension_select" list="extension_list" placeholder="any" />
+        <datalist id="extension_list">
+            <option value="wav"></option>
+            <option value="mp3"></option>
+            <option value="rx2"></option>
+            <option value="ogg"></option>
+        </datalist>
+        <br />
+
+        <label for-="delay">Start a download every&nbsp;</label>
+
+        <input type="number" name="delay" id="delay" placeholder="1" value="0.5" min="0.25" step="0.25" />
+        <label for-="delay">second(s).</label>
+
+        <br />
+
+        <label for="include_url" id="include_url_label">Include URL in filename</label>
+        <input type="checkbox" id="include_url" name="include_url" />
+
+    </form>
+
+    <p id="status_message"><br /></p>
+
+    <div id="progressbar"><br /></div>
+
+
+
+    <button id="download" role="progressbar">
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" id="download-icon"></span>
+        <span class="glyphicon glyphicon-ban-circle" aria-hidden="true" id="stopdownload-icon"></span>
+    </button>
+
+    
+
+</body>
+
+</html>
